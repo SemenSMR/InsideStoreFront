@@ -1,6 +1,155 @@
-.app-title {
-    font-size: 36px; /* Размер шрифта для заголовка */
-    color: #333; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
-    margin: 20px 0; /* Отступ сверху и снизу */
+/* Общий стиль для всего приложения */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Навигационная панель */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Распределение элементов */
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    gap: 20px; /* Отступы между ссылками */
+}
+
+.navbar-left a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navbar-left a:hover {
+    color: #4CAF50; /* Цвет при наведении */
+}
+/* Стили для правой части панели (поиск и корзина) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Отступы между элементами */
+}
+
+/* Стили для поисковой строки */
+.search-bar {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #4CAF50; /* Цвет при фокусе */
+}
+
+/* Стили для корзины */
+.cart-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #4CAF50; /* Цвет при наведении */
+}
+
+/* Стили для списка ссылок */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px; /* Расстояние между элементами */
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку */
+.nav-links li a:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
+}
+
+/* Стиль активной ссылки */
+.nav-links li a.active {
+    background-color: #45a049;
+}
+
+/* Основной контент (чтобы не перекрывался панелью навигации) */
+.main-content {
+    margin-top: 70px; /* Отступ, чтобы контент не скрывался под панелью */
+    padding: 20px;
+}
+
+/* Начальный экран на полный экран */
+.home-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('/background-image.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Заголовок на главной странице */
+.home-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Описание */
+.home-description {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Кнопки */
+.home-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.home-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4CAF50; /* Основной цвет кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
 }
